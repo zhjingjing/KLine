@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/radioGroupLand"
+            android:layout_width="fill_parent"
+            android:layout_height="28.0dip"
+            android:background="#ffeaedef"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#0000cc"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="分时"
+                android:textColor="#fff" />
+
+            <RadioButton
+                android:id="@+id/radio_day"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#0000cc"
+                android:button="@null"
+                android:gravity="center"
+                android:text="日K"
+                android:textColor="#fff" />
+
+            <RadioButton
+                android:id="@+id/radio_week"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#0000cc"
+                android:button="@null"
+                android:gravity="center"
+                android:text="周K"
+                android:textColor="#fff" />
+
+            <RadioButton
+                android:id="@+id/radio_month"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#0000cc"
+                android:button="@null"
+                android:gravity="center"
+                android:text="月K"
+                android:textColor="#fff"
+                />
+        </RadioGroup>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="42dip"
+            android:layout_height="42dip"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.kchart.chart.FsChart2
+            android:id="@+id/fs_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.kchart.chart.KxChart
+            android:id="@+id/kx_View1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <com.kchart.chart.KxChart
+            android:id="@+id/kx_View2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.kchart.chart.KxChart
+            android:id="@+id/kx_View3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>
